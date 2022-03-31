@@ -1,39 +1,55 @@
-<!DOCTYPE HTML>
-<!--
-	Eventually by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>TechnoTalks</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="icon" type="image/x-icon" href="static/images/TT1000.ico">
-		<link rel="stylesheet" href="static/assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnoTalks</title>
+    <link rel="stylesheet" href="../static/main/scss/main.css">
+</head>
+<body>
+    <div class="hero" id="hero">
+        <nav>
+            <img src="../static/main/images/TT transparent.png" width="100" height="100" alt="Logo"></img>
+            <ul>
+                <li><a href="#">Landing</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+        </nav>
+        <div class="title">
+            <h1>Hey, I'm <span>TechnoTalks!</span></h4>
+            <h3>Student | Developer | Content Creator</h3>
+            <a href="#about"><btn>Explore</btn></a>
+        </div>
+    </div>
+    <script src="../static/main/jquery/jquery-3.6.0.slim.min.js"></script>
+    <script src="../static/main/jquery/jquery.backgroundMove.js"></script>
+    <script>
+        $('.hero').backgroundMove({
+        movementStrength:'50'
+        });
+    </script>
 
-		<!-- Header -->
-			<header id="header">
-				<h1>Coming Soon...</h1>
-				<p>Hey you found my website! Though it's currently being redesigned... You can check out my <a href="https://github.com/TechnoTalksDev">GitHub</a> in the mean time!</p>
-			</header>
+    <section class="about">
+        <a id="about">About Me</a>
+        <div class="about-main">
+            <img src="../static/main/images/TT transparent.png">
+            <div class="about-text">
+                <h2>About me</h2>
+                <h5><span>Python</span> | Open-Source | <span>Developer</span></h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. 
+                Nulla facilisi cras fermentum odio eu feugiat. 
+                Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem. 
+                Arcu bibendum at varius vel pharetra vel turpis nunc eget. 
+                Quis hendrerit dolor magna eget est lorem ipsum dolor.</p>
+                <button type="button">Projects</button>
+                <button type="button">Services</button>
+            </div>
+        </div>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://discord.gg/8vNHAA36fR" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
-					<li><a href="https://github.com/TechnoTalksDev" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="https://www.youtube.com/channel/UCy4Apz86dt0PKghhZK9xFlQ" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; TechnoTalks</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="static/assets/js/main.js"></script>
-
-	</body>
+    </section>
+</body>
 </html>

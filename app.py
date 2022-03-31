@@ -3,7 +3,11 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
-def home(): 
+def coming_soon(): 
+    return render_template("coming_soon.html")
+
+@app.route("/dev/")
+def index(): 
     return render_template("index.html")
 
 @app.errorhandler(404)
