@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+$accent-color: #38b6ff;
+
 *{
     padding: 0;
     margin: 0;
@@ -14,10 +17,12 @@ body {
     animation: fadeInAnimation ease 2.1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    overflow-x: hidden;
+    background-color: black;
 }
 
 span{
-    color: #38b6ff; 
+    color: $accent-color; 
 }
 
 @keyframes fadeInAnimation {
@@ -32,13 +37,12 @@ span{
 }
 
 .hero{
-    --x: 0px;
-    --y: 0px;
     height: 100vh;
-    width: 98.9vw;
-    background-image: url(../images/bg.png);
+    width: 100vw;
+    background-image: url(../images/Stars.gif);
     background-size: 120%;
-    background-position: center;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 nav{
@@ -64,7 +68,7 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: #38b6ff;
+    color: $accent-color;
     font-size: 27px;
     filter: drop-shadow(10px 10px 10px grey);
     transition: .4s;
@@ -72,7 +76,7 @@ nav ul li a:hover{
 
 
 nav img:hover{
-    transform: scale(1.08   );
+    transform: scale(1.08);
     filter: drop-shadow(10px 10px 10px grey);
     transition: .4s;
 }
@@ -87,7 +91,7 @@ nav img:hover{
 .title btn{
     font-size: 24px;
     color: #151D21;
-    background: #38b6ff;
+    background: $accent-color;
     display: inline-flex;
     padding: 7px 40px 7px 40px;
     margin-top: 30px;
@@ -101,15 +105,32 @@ nav img:hover{
     text-decoration: none;
 }
 
-h1{
+.title h1{
     color: white;
     margin: 20px 0px 20px;
     font-size: 75px;
+    filter: drop-shadow(10px 10px 10px grey);
 }
-h3{
+.title h3{
     color: white;
     font-size: 40px;
+    filter: drop-shadow(10px 10px 10px grey);
 }
+
+/*
+.title h1:hover{
+    filter: drop-shadow(10px 10px 10px grey);
+    font-size: 77px;
+    transition: .4s;
+}
+
+.title h3:hover{
+    filter: drop-shadow(10px 10px 10px grey);
+    font-size: 42px;
+    transition: .4s;
+}
+
+*/
 
 /* About Sectioin */
 
@@ -125,6 +146,17 @@ h3{
     width: 430px;
 }
 
+@media screen and (max-width: 850px) {
+    .about img{
+        width: 286px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about img{
+        width: 215px;
+    }
+}
 .about-text{
     width: 550px;
 }
@@ -164,7 +196,7 @@ h3{
 button {
     font-size: 24px;
     color: #151D21;
-    background: #38b6ff;
+    background: $accent-color;
     display: inline-flex;
     padding: 7px 40px 7px 40px;
     margin-top: 30px;
@@ -176,7 +208,7 @@ button {
 
 button:hover{
     background-color: transparent;
-    border: 2px solid #38b6ff;
+    border: 2px solid $accent-color;
     cursor: pointer;
     color: white;
 }

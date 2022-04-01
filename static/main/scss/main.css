@@ -18,6 +18,8 @@ body {
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  overflow-x: hidden;
+  background-color: black;
 }
 
 span {
@@ -51,13 +53,12 @@ span {
 }
 
 .hero {
-  --x: 0px;
-  --y: 0px;
   height: 100vh;
-  width: 98.9vw;
-  background-image: url(../images/bg.png);
+  width: 100vw;
+  background-image: url(../images/Stars.gif);
   background-size: 120%;
-  background-position: center;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 nav {
@@ -131,17 +132,35 @@ nav img:hover {
   text-decoration: none;
 }
 
-h1 {
+.title h1 {
   color: white;
   margin: 20px 0px 20px;
   font-size: 75px;
+  -webkit-filter: drop-shadow(10px 10px 10px grey);
+          filter: drop-shadow(10px 10px 10px grey);
 }
 
-h3 {
+.title h3 {
   color: white;
   font-size: 40px;
+  -webkit-filter: drop-shadow(10px 10px 10px grey);
+          filter: drop-shadow(10px 10px 10px grey);
 }
 
+/*
+.title h1:hover{
+    filter: drop-shadow(10px 10px 10px grey);
+    font-size: 77px;
+    transition: .4s;
+}
+
+.title h3:hover{
+    filter: drop-shadow(10px 10px 10px grey);
+    font-size: 42px;
+    transition: .4s;
+}
+
+*/
 /* About Sectioin */
 .about {
   width: 100%;
@@ -152,6 +171,18 @@ h3 {
 .about img {
   height: auto;
   width: 430px;
+}
+
+@media screen and (max-width: 850px) {
+  .about img {
+    width: 286px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about img {
+    width: 215px;
+  }
 }
 
 .about-text {
