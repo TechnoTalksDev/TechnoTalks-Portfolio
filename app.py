@@ -1,15 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, redirect
 import os
 
-app = Flask(__name__)
+app = Flask('app')
 
-@app.route("/")
-def index(): 
-    return render_template("index.html")
-
-@app.errorhandler(404)
-def not_found(e):
-    return render_template("grey.html")
+@app.route('/')
+def hello_world():
+  return redirect("https://www.technotalks.net/", 301)
 
 if __name__ == "__main__":
     os.environ["FLASK_ENV"] = "development"
