@@ -5,8 +5,6 @@ color-1: #2c3e50
 color-2: #1abc9c
 color-3: #2ecc71
 */
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
-
 
 :root {
   font-family: "Rajdhani", sans-serif;
@@ -22,6 +20,9 @@ color-3: #2ecc71
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+
+  --accent-color: #38b6ff;
 }
 
 a {
@@ -84,12 +85,12 @@ button:focus-visible {
 }
 
 .card:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 650px) {
   .card {
-    width: 90%;
+    width: 80%; 
   }
 }
 
@@ -116,7 +117,7 @@ p {
   }
 
   50% {
-    scale: 1 1.5;
+    scale: 1 1.35;
   }
 
   to {
@@ -130,7 +131,7 @@ p {
   background-color:white;
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(to right, aquamarine, lightblue);
+  background: linear-gradient(to right, var(--accent-color), lightblue);
   animation: rotate 20s infinite;
   filter: blur(150px);
   z-index: -1;
