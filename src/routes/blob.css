@@ -21,17 +21,17 @@ color-3: #2ecc71
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-
-  --accent-color: #38b6ff;
+  
 }
 
 a {
-  font-weight: 500;
+  font-weight: bolder;
+  color: inherit;
+  text-decoration: inherit;
   background: -webkit-linear-gradient(#eee, #333);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-decoration: inherit;
 }
 
 body {
@@ -40,8 +40,15 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  overflow-y: hidden;
+  height: 100vh;
+  width: 100vw;
   overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --accent-color: #38b6ff;
+  --reko-color: lightgreen;
 }
 
 h1 {
@@ -78,7 +85,7 @@ button:focus-visible {
 .card {
   width: 500px;
   height: 300px;
-  margin: 150px auto;
+  margin: 100px auto;
   padding: 1em;
   text-align: left;
   transition: transform 2s;
@@ -109,6 +116,7 @@ h2 {
 
 p {
   font-size: 1.2em;
+  text-align: center;
 }
 
 @keyframes rotate {
@@ -135,4 +143,23 @@ p {
   animation: rotate 20s infinite;
   filter: blur(150px);
   z-index: -1;
+}
+
+main {
+  align-self: center;
+}
+
+strong {
+  background: linear-gradient(to right, white 0%, var(--accent-color) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#reko {
+  background: linear-gradient(to right, white 0%, var(--reko-color) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
 }
