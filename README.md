@@ -1,4 +1,4 @@
-# www.technotals.net
+# www.technotalks.net
 
 Just a simple page to showcase what I do. Currently WIP
 
