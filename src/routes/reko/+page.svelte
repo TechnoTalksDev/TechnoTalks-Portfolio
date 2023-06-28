@@ -29,15 +29,17 @@
 
 <main>
   <div id="blob" style="left: {$x}px; top: {$y}px;"></div>
-  
+
+  <h1 class = "lift">Reko</h1>
+  <h3 class = "lift">A simple Minecraft Server Integration bot!</h3>
   <div class="card glass">
-    <h1>Hi!</h1>
-    <h2>Reko's website is under some construction 🚧<br>
+    <h2>Hi!</h2>
+    <p>Reko's website is under some construction 🚧<br>
       Soon you'll be able to <strong>invite the bot</strong> and <strong>view bot stats</strong> here!
-    </h2>
+    </p>
   </div>
 
-  <p>
+  <p id="footer">
     Check out the <a href="https://github.com/TechnoTalksDev/TechnoTalks-Portfolio/tree/wip/construction" target="_blank">repository</a>, for updates!
     <a data-sveltekit-preload-data="off" href="/"><div id="techno">TechnoTalks's page</div></a>
   </p>
@@ -95,11 +97,11 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: inherit;
+  transition: font-size 1s
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+a:hover {
+  font-size: 105%;
 }
 
 /*
@@ -125,8 +127,8 @@ button:focus-visible {
 
 .card {
   width: 500px;
-  height: 300px;
-  margin: 100px auto;
+  height: auto;
+  margin: 0.5in auto;
   padding: 1em;
   text-align: left;
   transition: transform 2s;
@@ -151,12 +153,30 @@ button:focus-visible {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
+.lift {
+  text-shadow: 1px 1px 3px rgb(204, 204, 204);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
 h2 {
+  font-size: 2.5em;
+}
+
+h3 {
   font-size: 1.5em;
+  line-height: 1.1;
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.3em; 
+  text-align: left;
+}
+
+#footer {
   text-align: center;
 }
 
