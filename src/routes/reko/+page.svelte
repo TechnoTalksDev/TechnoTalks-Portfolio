@@ -2,7 +2,8 @@
 	import { tweened } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing';
   import { browser } from '$app/environment';
-
+	import { each, onMount } from 'svelte/internal';
+  
   //import './reko.css';
 
 	const x = tweened(0, {
@@ -25,6 +26,15 @@
       y.set(clientY-250)
     }
   }
+  /**
+	 * @type {any[]}
+	 */
+  var stats = []
+  
+  onMount(async () => {
+    const response = await fetch("/reko/stats");
+    stats = await response.json()
+  })
 </script>
 
 <main>
@@ -38,7 +48,17 @@
       Soon you'll be able to <strong>invite the bot</strong> and <strong>view bot stats</strong> here!
     </p>
   </div>
-
+  <div class = "grid">
+    {#each stats as stat}
+      <div class="card glass stat">
+        <h3>{stat.name}</h3>
+        <p>
+          <strong>{stat.value}</strong><br/>
+          {stat.label}
+        </p>
+      </div>
+    {/each}
+  </div>
   <p id="footer">
     Check out the <a href="https://github.com/TechnoTalksDev/TechnoTalks-Portfolio/tree/wip/construction" target="_blank">repository</a>, for updates!
     <a data-sveltekit-preload-data="off" href="/"><div id="techno">TechnoTalks's page</div></a>
@@ -69,22 +89,21 @@ Colors for Reko
 
   
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 main {
   display: flex;
   margin: 0;
+  padding: 20px;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-  overflow-y: hidden;
   align-items: center;   
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   --accent-color: lightgreen;
   --techno-color: #38b6ff;
 }
@@ -157,6 +176,16 @@ button:focus-visible {
   text-shadow: 1px 1px 3px rgb(204, 204, 204);
 }
 
+.stat {
+  width: 1.75in;
+  text-align: center;
+  margin: 0.25in 10px;
+}
+
+.grid {
+  display: flex;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -167,13 +196,12 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   line-height: 1.1;
 }
 
 p {
   font-size: 1.3em; 
-  text-align: left;
 }
 
 #footer {
@@ -209,6 +237,7 @@ p {
 strong {
   /* Set the background color */
   background: linear-gradient(to right, white 0%, var(--accent-color) 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
