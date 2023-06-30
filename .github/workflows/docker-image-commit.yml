@@ -30,4 +30,3 @@ jobs:
           context: .
           push: true
           tags: wip
-          labels: ${{ steps.meta.outputs.labels }}
