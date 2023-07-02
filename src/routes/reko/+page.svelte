@@ -3,7 +3,7 @@
 	import { cubicOut } from 'svelte/easing';
   import { browser } from '$app/environment';
 	import { each, onMount } from 'svelte/internal';
-  
+
   //import './reko.css';
 
 	const x = tweened(0, {
@@ -48,6 +48,7 @@
       Soon you'll be able to <strong>invite the bot</strong> and <strong>view bot stats</strong> here!
     </p>
   </div>
+  <h2 id="stats">Stats</h2>
   <div class = "grid">
     {#each stats as stat}
       <div class="card glass stat">
@@ -59,6 +60,7 @@
       </div>
     {/each}
   </div>
+  <button class = "glass"><a href="/reko/invite"><strong>Invite now</strong></a></button>
   <p id="footer">
     Check out the <a href="https://github.com/TechnoTalksDev/TechnoTalks-Portfolio/tree/wip/construction" target="_blank">repository</a>, for updates!
     <a data-sveltekit-preload-data="off" href="/"><div id="techno">TechnoTalks's page</div></a>
@@ -89,6 +91,7 @@ Colors for Reko
 
   
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 main {
@@ -147,7 +150,7 @@ button:focus-visible {
 .card {
   width: 500px;
   height: auto;
-  margin: 0.5in auto;
+  margin: 0.25in auto;
   padding: 1em;
   text-align: left;
   transition: transform 2s;
@@ -184,6 +187,21 @@ button:focus-visible {
 
 .grid {
   display: flex;
+}
+
+#stats {
+  margin: 0;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 1.8em;
+  font-family: inherit;
+  transition: transform 2s;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 
 h1 {

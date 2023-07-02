@@ -2,7 +2,13 @@ import { error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { Long, MongoClient, ObjectId } from 'mongodb';
 
-const uri = import.meta.env.VITE_URI
+import dotenv from 'dotenv'
+
+dotenv.config()
+
+const env = process.env
+
+const uri = env.URI as string
 
 export const GET = (async ({ url }) => {
     const client = new MongoClient(uri);
