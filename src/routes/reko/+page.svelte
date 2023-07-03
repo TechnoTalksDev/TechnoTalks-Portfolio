@@ -41,13 +41,41 @@
   <div id="blob" style="left: {$x}px; top: {$y}px;"></div>
 
   <h1 class = "lift">Reko</h1>
-  <h3 class = "lift">A simple Minecraft Server Integration bot!</h3>
+  <h3>A simple Minecraft server integration bot</h3>
   <div class="card glass">
-    <h2>Hi!</h2>
-    <p>Reko's website is under some construction 🚧<br>
-      Soon you'll be able to <strong>invite the bot</strong> and <strong>view bot stats</strong> here!
+    <h2>Minecraft Server Integration</h2>
+    <p>Introducing <strong>Reko</strong>, the ultimate Discord bot for Minecraft. Check <u>server stats, get real-time updates, and seamlessly integrate</u> your server into Discord. Elevate your Minecraft Server community experience!
     </p>
   </div>
+
+  <h2 class="compact">Features</h2>
+  <div class = "grid">
+    <div class = "card glass feat">
+      <h3>
+        📶Server stats
+      </h3>
+      <p>
+        Get stats of any Java server! Including player count, version, latency, playerlist(with query enabled),  and MOTD!
+      </p>
+    </div>
+    <div class = "card glass feat">
+      <h3>
+        ⚙️Customizable
+      </h3>
+      <p>
+        Setup up various features that customize Reko to your server! Set the /server command so your members dont have to type the ip to get the status! Or setup an automatically updating server panel to display important stats!
+      </p>
+    </div>
+    <div class = "card glass feat">
+      <h3>
+        🔗Reko Link
+      </h3>
+      <p>
+        Complete integration with your server! Using the Reko Link plugin on your server get server chat and more to your discord! Read the <a href="https://github.com/TechnoTalksDev/Reko/blob/main/docs/features/rekolink.md">docs</a>
+      </p>
+    </div>
+  </div>
+
   <h2 id="stats">Stats</h2>
   <div class = "grid">
     {#each stats as stat}
@@ -185,12 +213,24 @@ button:focus-visible {
   margin: 0.25in 10px;
 }
 
+.feat {
+  width: 3.5in;
+  margin: 0.25in 10px;
+  height: 3in;
+}
+
+.compact {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
 .grid {
   display: flex;
 }
 
 #stats {
   margin: 0;
+  margin-top: 50px;
 }
 
 button {
@@ -207,6 +247,8 @@ button:hover {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin-top: 75px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -216,10 +258,16 @@ h2 {
 h3 {
   font-size: 1.7em;
   line-height: 1.1;
+  margin-top: 20px;
 }
 
 p {
   font-size: 1.3em; 
+}
+
+u {
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--accent-color);
 }
 
 #footer {
