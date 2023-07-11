@@ -3,7 +3,7 @@
 	import { tweened } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing';
   import { browser } from '$app/environment';
-	import { each, onMount } from 'svelte/internal';
+  import aboutbg from '$lib/assets/aboutbg.svg'
 
 	const x = tweened(0, {
 		duration: 1500,
@@ -32,8 +32,8 @@
   <div id="blur"></div>
   <nav>
     <ul>
-      <li><a href="#news">Contact</a></li>
-      <li><a href="#contact">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#proj">Projects</a></li>
       <li><a href="#aboutme">About</a></li>
     </ul>    
   </nav>
@@ -51,9 +51,8 @@
 
 </div>
 
-<section id="about">
+<section id="about" style = "background-image: url({aboutbg});" >
   <h1 class="lift">About me</h1>
-
   <div class = "card glass">
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus recusandae enim beatae deleniti voluptas ex nesciunt sed harum iure ea, id fugit excepturi, dolorum ullam libero, odio rem quas vel? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatum placeat rem sit debitis itaque repellat, temporibus, est accusantium a consequuntur magni <strong>fuga eveniet ducimus laudantium aliquid sapiente reprehenderit culpa.</strong></p>
   </div>
@@ -133,7 +132,7 @@ nav ul {
 }
 
 nav li {
-  font-size: 1.1em;
+  font-size: 1.2em;
   float: right;
 }
 
@@ -146,9 +145,9 @@ nav li a {
 }
 
 
-
 #about {
-  background-image: linear-gradient(var(--accent-color), var(--background-color));;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #proj {
