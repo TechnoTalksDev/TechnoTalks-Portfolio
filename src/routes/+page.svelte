@@ -52,9 +52,11 @@
 </div>
 
 <section id="about" style = "background-image: url({aboutbg});" >
-  <h1 class="lift">About me</h1>
-  <div class = "card glass">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus recusandae enim beatae deleniti voluptas ex nesciunt sed harum iure ea, id fugit excepturi, dolorum ullam libero, odio rem quas vel? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatum placeat rem sit debitis itaque repellat, temporibus, est accusantium a consequuntur magni <strong>fuga eveniet ducimus laudantium aliquid sapiente reprehenderit culpa.</strong></p>
+  <div class="side">
+    <h1 class="lift">About me</h1>
+    <div class="divider"></div>
+    <div class="card glass vertical">Hi, I'm TechnoTalks! A fifteen year old developer based in the US. I dabble in a lot of facets of CS including, Web Development, Bot/API Automation, Extensions with API's, and Robotics. I've dabbled with quite a few langues including: Python, C++, Java, JavaScript, and HTML/CSS.</div>  
+    
   </div>
 
   <div class="wave2">
@@ -69,7 +71,10 @@
 
 <section id="proj">
 
-  <h1>Projects</h1>
+  <h1 class="lift">Projects</h1>
+  <div class="side">
+  </div>
+
 
 </section>
 
@@ -159,6 +164,9 @@ nav li a {
   height: 50vh;
 }
 
+
+
+
 .glass{
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(10px);
@@ -174,11 +182,38 @@ nav li a {
   margin: 100px auto;
   padding: 1em;
   text-align: left;
-  transition: transform 2s;
+  transition: transform 1.25s;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
+
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.048)
+}
+
+.divider {
+  height: 75%;
+  border-image: linear-gradient(var(--background-color), var(--accent-color)) 30;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.vertical {
+  width: 350px;
+  height: 500px;
+  margin: 0;
+  
+}
+.side {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
