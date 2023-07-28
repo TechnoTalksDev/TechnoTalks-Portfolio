@@ -55,8 +55,31 @@
   <div class="side">
     <h1 class="lift">About me</h1>
     <div class="divider"></div>
-    <div class="card glass vertical">Hi, I'm TechnoTalks! A fifteen year old developer based in the US. I dabble in a lot of facets of CS including, Web Development, Bot/API Automation, Extensions with API's, and Robotics. I've dabbled with quite a few langues including: Python, C++, Java, JavaScript, and HTML/CSS.</div>  
-    
+    <div class="card glass vertical">
+      <p>
+        Hey there, I'm TechnoTalks, a teenage developer with a love for all things tech! I've dabbled in Web Development, Discord Bots, API Plugins, and Robotics, and enjoy working on projects in Python, C++, Java, JavaScript, and HTML/CSS.
+        <br/>
+        <br/>
+        You know what's exciting? Creating with code and making a difference! It's amazing to see a bunch of lines turn into something awesome right before your eyes. Whether it's building cool websites, coding interactive bots for Discord, crafting handy API plugins, or diving into the world of robotics, the challenge is enticing!
+        <br/>
+        <br/>
+        There's just something magical about bringing ideas to life through programming. My goal is to make a positive impact on the world, one project at a time. I believe that someday my creations will change the game and make people's lives easier or more fun!
+      </p>
+    </div>  
+    <div class="cdivider"></div>
+    <div class="card glass vertical">
+      <p>
+        I'm constantly learning and experimenting with new technologies because, hey, there's always something new and exciting on the horizon. It's a never-ending adventure, and loving every moment of it is a bonus.
+        <br/>
+        <br/>
+        So, if you ever need a hand with a tech project or want to geek out over the latest coding trends, hit me up! Together, we can build some cool stuff and make the world a little bit more beautiful with the power of code. 🚀
+        <br/>
+        <br/>
+      </p>
+
+      <button>Contact</button>
+    </div> 
+
   </div>
 
   <div class="wave2">
@@ -164,9 +187,6 @@ nav li a {
   height: 50vh;
 }
 
-
-
-
 .glass{
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(10px);
@@ -202,11 +222,33 @@ nav li a {
   margin-right: 5%;
 }
 
+.cdivider{
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: none;
+  border-radius: 50px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color); 
+  border-radius: 50px;
+}
+
 .vertical {
-  width: 350px;
-  height: 500px;
+  width: 25vw;
+  height: 550px;
   margin: 0;
-  
+  overflow-y:auto;
 }
 .side {
   display: flex;
