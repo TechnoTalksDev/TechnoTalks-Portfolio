@@ -32,7 +32,7 @@
   <div id="blur"></div>
   <nav>
     <ul>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#con">Contact</a></li>
       <li><a href="#proj">Projects</a></li>
       <li><a href="#aboutme">About</a></li>
     </ul>    
@@ -53,32 +53,24 @@
 
 <section id="about" style = "background-image: url({aboutbg});" >
   <div class="side">
-    <h1 class="lift">About me</h1>
+    <h1 class="lift" id="about-header">About me</h1>
     <div class="divider"></div>
     <div class="card glass vertical">
       <p>
-        Hey there, I'm TechnoTalks, a teenage developer with a love for all things tech! I've dabbled in Web Development, Discord Bots, API Plugins, and Robotics, and enjoy working on projects in Python, C++, Java, JavaScript, and HTML/CSS.
+        Hi! I'm TechnoTalks, a teenage developer passionate about technology. I specialize in Web Development, Discord Bots, API Plugins, and Robotics, using Python, C++, Java, JavaScript, and HTML/CSS.
         <br/>
         <br/>
-        You know what's exciting? Creating with code and making a difference! It's amazing to see a bunch of lines turn into something awesome right before your eyes. Whether it's building cool websites, coding interactive bots for Discord, crafting handy API plugins, or diving into the world of robotics, the challenge is enticing!
+        I love creating with code and making a positive impact. From captivating websites to interactive bots, I thrive on challenges and constant learning.
         <br/>
+        <br/>        
+        Let's build something amazing together! Reach out for tech projects or to discuss the latest coding trends. 🚀
         <br/>
-        There's just something magical about bringing ideas to life through programming. My goal is to make a positive impact on the world, one project at a time. I believe that someday my creations will change the game and make people's lives easier or more fun!
+        <br/> 
+        
       </p>
+      <button>Contact</button>
     </div>  
     <div class="cdivider"></div>
-    <div class="card glass vertical">
-      <p>
-        I'm constantly learning and experimenting with new technologies because, hey, there's always something new and exciting on the horizon. It's a never-ending adventure, and loving every moment of it is a bonus.
-        <br/>
-        <br/>
-        So, if you ever need a hand with a tech project or want to geek out over the latest coding trends, hit me up! Together, we can build some cool stuff and make the world a little bit more beautiful with the power of code. 🚀
-        <br/>
-        <br/>
-      </p>
-
-      <button>Contact</button>
-    </div> 
 
   </div>
 
@@ -93,11 +85,9 @@
 </section>
 
 <section id="proj">
-
   <h1 class="lift">Projects</h1>
   <div class="side">
   </div>
-
 
 </section>
 
@@ -205,11 +195,18 @@ nav li a {
   transition: transform 1.25s;
   transform: translateZ(0);
   backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 .card:hover {
   transform: scale(1.048)
+}
+
+.card p {
+  margin-top: 10px;
 }
 
 .divider {
@@ -220,6 +217,24 @@ nav li a {
   border-radius: 10px;
   margin-left: 5%;
   margin-right: 5%;
+}
+
+@media only screen and (max-width: 1230px) {
+  .vertical {
+    min-width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #about-header {
+    display: none;
+  }
+  .divider {
+    display: none;
+  }
+  .vertical {
+    min-width: 50vw;
+  }
 }
 
 .cdivider{
@@ -364,18 +379,21 @@ strong {
 button {
   font-size: 1.3em;
   font-family: inherit;
+  text-align: center;
+
   color: white;
   background-color: transparent;
   border: 2px solid var(--accent-color);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+
   padding: 7px 40px 7px 40px;
   margin-top: 10px;
   margin-right: 5%;
   margin-left: 5%;
+  width: 150px;
+
   border-radius: 5px;
   transition: background-color 0.5s;
+  text-align: center;
 }
 
 button:hover {
