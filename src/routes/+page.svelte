@@ -3,7 +3,7 @@
 	import { tweened } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing';
   import { browser } from '$app/environment';
-  import aboutbg from '$lib/assets/aboutbg.svg'
+  import VanillaTilt from 'vanilla-tilt';
 
 	const x = tweened(0, {
 		duration: 1500,
@@ -15,6 +15,9 @@
 		easing: cubicOut
 	});
 
+ 
+
+
   if (browser) {
     const blob = document.getElementById("blob")
 
@@ -22,9 +25,22 @@
       const {clientX, clientY} = event;
       console.log(clientX, clientY)
       x.set(clientX-250)
-      y.set((clientY-250)+window.scrollY)
+      //to not get stuck
+      //y.set((clientY-250)+window.scrollY)
+      y.set((clientY-250))
     }
+    //
+    const tilt = document.querySelector(".js-tilt");
+    // @ts-ignore
+    VanillaTilt.init(tilt, {
+      max: 5, 
+      speed: 400
+    });
+
   }
+
+
+
 </script>
 
 <div id="blur"></div>
@@ -44,7 +60,7 @@
   <h1>Hi, I'm TechnoTalks!</h1>
 
   <h2><strong>Student | Developer</strong></h2>
-  <a href="#aboutme"><button>Explore </button></a>
+  <a href="#about"><button>Explore </button></a>
   <!--
   <div class="wave" id = "aboutme">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -61,23 +77,23 @@
 -->
 <section id="about">
   <div class="side">
-    <h1 class="lift" id="about-header">About me</h1>
+    <!--
     <div class="divider"></div>
-    <div class="card glass vertical">
+    -->
+      <h1 class="lift" id="about-header">About me</h1>
+      <div class="divider"></div>
       <p>
-        Hi! I'm TechnoTalks, a teenage developer passionate about technology. I specialize in Web Development, Discord Bots, API Plugins, and Robotics, using Python, C++, Java, JavaScript, and HTML/CSS.
-        <br/>
-        <br/>
-        I love creating with code and making a positive impact. From captivating websites to interactive bots, I thrive on challenges and constant learning.
-        <br/>
-        <br/>        
-        Let's build something amazing together! Reach out for tech projects or to discuss the latest coding trends. 🚀
+        A self taught teenage developer<br/> 
+        Web Development, Discord Bots, API Plugins, Robotics <br>
+        Using Python, C++, Java, JavaScript, and HTML/CSS.
+        Learning 24/7
+        <br/>     
+        Ready to create?
         <br/>
         <br/> 
-        
+        <a href="#proj"><button>Projects</button></a>   
       </p>
-      <a href="#con"><button>Contact</button></a>
-    </div>  
+      
     <div class="cdivider"></div>
 
   </div>
@@ -139,6 +155,8 @@ section {
   --background-color: #111519;
   --accent-color: #38b6ff;
   --proj-color: #F1E9DB;
+  --tan-color: #d7ceb2;
+  --grey-color: #726e75;
   background-color: var(--background-color);
   overflow-x: hidden;
 
@@ -208,14 +226,15 @@ nav li a {
   align-items: center;
 }
 
-
+/*
 .card:hover {
   transform: scale(1.048)
 }
-
+*/
 .card p {
   margin-top: 10px;
 }
+
 
 .divider {
   height: 75%;
@@ -234,9 +253,6 @@ nav li a {
 }
 
 @media only screen and (max-width: 650px) {
-  #about-header {
-    display: none;
-  }
   .divider {
     display: none;
   }
@@ -268,7 +284,7 @@ nav li a {
 }
 
 .vertical {
-  width: 25vw;
+  width: 30vw;
   height: 550px;
   margin: 0;
   overflow-y:auto;
@@ -352,6 +368,7 @@ strong {
 
 .lift {
   text-shadow: 1px 1px 3px rgb(204, 204, 204);
+  font-size: 5em;
 }
 
 @keyframes rotate {
