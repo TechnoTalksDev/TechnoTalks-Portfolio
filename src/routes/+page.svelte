@@ -159,7 +159,24 @@
 			link: "https://www.simeo.app/",
 			github: "https://github.com/TechnoTalksDev/Simeo",
 			tags: ["FBLA", "full-stack"]
+		},
+		{
+			name: "Rider-MC",
+			img: "/rider-banner.png",
+			description: "Ride any Minecraft mob!",
+			link: "https://www.spigotmc.org/resources/rider-simple-easy-ride-anything-1-8x-1-17x.93807/",
+			github: "https://github.com/TechnoTalksDev/Rider-MC",
+			tags: ["Minecraft", "Plugin", "Java"]
+		},
+		{
+			name: "CraftableSaddlesMC",
+			img: "/saddle-banner.png",
+			description: "With a variety of permissions!",
+			link: "https://www.spigotmc.org/resources/craftablesaddles-simple-easy-1-8x-1-17x.93871/",
+			github: "https://github.com/TechnoTalksDev/CraftableSaddlesMC",
+			tags: ["Minecraft", "Plugin", "Java"]
 		}
+
 	]
 
 	const featuredProject= {name: "Simeo", description: "A GPA and Grade solution for Synergy students", tags: ["FBLA", "full-stack"], link: "https://www.simeo.app/", github: "https://github.com/TechnoTalksDev/Simeo", img: "/simeo_full.png"}
