@@ -161,6 +161,14 @@
 			tags: ["FBLA", "full-stack"]
 		},
 		{
+			name: "Reko Link",
+			img: "/reko-banner.png",
+			description: "Integration server-side for Reko",
+			link: "",
+			github: "https://github.com/TechnoTalksDev/Reko-Link",
+			tags: ["WebSockets", "API", "Minecraft", "Server"]
+		},
+		{
 			name: "Rider-MC",
 			img: "/rider-banner.png",
 			description: "Ride any Minecraft mob!",
@@ -175,7 +183,15 @@
 			link: "https://www.spigotmc.org/resources/craftablesaddles-simple-easy-1-8x-1-17x.93871/",
 			github: "https://github.com/TechnoTalksDev/CraftableSaddlesMC",
 			tags: ["Minecraft", "Plugin", "Java"]
+		},{
+			name: "Spaceboi",
+			img: "/spaceboi.png",
+			description: "Pilot and fight in 2D!",
+			link: "",
+			github: "https://github.com/TechnoTalksDev/Spaceboi",
+			tags: ["PyGame", "Python", "GameDev"]
 		}
+
 
 	]
 
@@ -240,7 +256,7 @@
 				<!--<h2 class="h1 text-7xl glow">About</h2>-->
 				<div class="card variant-glass-surface flex flex-col p-8 w-[25rem] max-w-[98vw]">
 					<div class="flex flex-col justify-between text-left">
-						<h2 class="h2">Hey I'm 👋<br/><span class="h1 text-6xl gradient-heading animate-gradient">Chandan</span></h2>
+						<h2 class="h2">Hey I'm <span class="wave">👋</span><br/><span class="h1 text-6xl gradient-heading animate-gradient">Chandan</span></h2>
 						
 						<div class="flex flex-row fill-white justify-between items-center mt-4">
 							

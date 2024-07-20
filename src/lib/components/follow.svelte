@@ -38,6 +38,9 @@
 		offset.y = (blobDimensions?.height ?? 320) / 2
 		document.addEventListener('mousemove', mouseMove)
 		document.addEventListener("touchstart", handleTouch);
+		document.addEventListener("touchend", handleTouch);
+		document.addEventListener("touchcancel",  handleTouch);
+		document.addEventListener("touchmove", handleTouch);
 	}
 
 	$: console.log(offset.x, offset.y)
