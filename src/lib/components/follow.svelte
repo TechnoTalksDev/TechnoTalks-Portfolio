@@ -20,7 +20,7 @@
 
 	function mouseMove(event: { clientX: number; clientY: number; }) {
 		if (!enabled) {
-			enabled = true
+			return
 		}
 		x.set(event.clientX - offset.x)
 		y.set(event.clientY - offset.y)
