@@ -4,7 +4,7 @@
 	import { backOut } from 'svelte/easing';
 	import { fade } from "svelte/transition";
 
-	let enabled = false
+	let enabled = true
 
 	let x = tweened(0, {
 			duration: 2000,
