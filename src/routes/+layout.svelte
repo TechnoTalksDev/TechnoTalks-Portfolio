@@ -23,10 +23,11 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
 	import { initializeStores, Toast } from '@skeletonlabs/skeleton';
+	import Unami from '$lib/components/unami.svelte';
 
 	initializeStores();
 </script>
-
+<Unami />
 <Toast position="br" padding="p-3"/>
 <!-- App Shell -->
 <AppShell>

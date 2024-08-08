@@ -369,7 +369,7 @@
 				<h3 class="h3 opacity-[65%] mb-2">Let me know when cool projects go live</h3>
 				<form class="flex flex-row" on:submit={handleMailList}>
 					<input class="input variant-glass mr-1" placeholder="Enter your email"/>
-					<button type="submit" class="btn variant-glass-primary ml-1">Join</button>
+					<button type="submit" class="btn variant-glass-primary ml-1" data-umami-event="mail-signup">Join</button>
 				</form>
 				
 			</div>
