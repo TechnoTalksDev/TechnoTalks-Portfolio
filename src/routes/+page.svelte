@@ -2,7 +2,7 @@
 	import Follow from '$lib/components/follow.svelte'
 	import { onMount } from 'svelte';
 	import { ArrowDown, Link } from 'lucide-svelte';
-	import { ProgressBar } from '@skeletonlabs/skeleton';
+	import Marqueeck from '@arisbh/marqueeck';
 	import { getToastStore } from '@skeletonlabs/skeleton';
 	import type { ToastSettings } from '@skeletonlabs/skeleton';
 
@@ -22,7 +22,7 @@
 
 	async function typeSub() {
 		for (const char of subs[currentSub]) {
-			await sleep(250);
+			await sleep(150);
 			//console.log(char)
 			sub += char
 		}
@@ -30,7 +30,7 @@
 		await sleep(3000);
 		
 		for (let i=sub.length-1; i >= 0; i--) {
-			await sleep(250);
+			await sleep(150);
 			sub = sub.slice(0, -1)
 			//console.log(sub)
 		}
@@ -144,6 +144,7 @@
 			github: "https://github.com/Exo10A",
 			tags: ["VEX", ["c++"]]
 		},
+		/*
 		{
 			name: "Retrospective",
 			img: "https://fastrepair.biz/wp-content/uploads/2018/10/iStock-984996502-3.jpg",
@@ -152,6 +153,7 @@
 			github: "",
 			tags: ["startup"]
 		},
+		*/
 		{
 			name: "Simeo",
 			img: "/simeo_full.png",
@@ -190,6 +192,13 @@
 			link: "",
 			github: "https://github.com/TechnoTalksDev/Spaceboi",
 			tags: ["PyGame", "Python", "GameDev"]
+		},{
+			name: "SAHF",
+			img: "/SAHF-banner.png",
+			description: "South Asian Heart Foundation website",
+			link: "https://www.sahf.life/",
+			github: "https://github.com/South-Asian-Heart-Foundation/SAHF-site",
+			tags: ["SvelteKit", "full-stack", "Non-profit"]
 		}
 
 
@@ -330,8 +339,8 @@
 			</div>
 			<!--Caurosel-->
 			<div class="w-[100vw] mt-2">
-				<div class="scroll-container">
-					<div class="scroll-content">
+				<div class="flex flex-row scroll-container">
+					<Marqueeck options={{ direction: "left", speed: 150, gap: 10, hoverSpeed: 10 }}>
 						{#each projects.concat(projects) as project, index}
 							<div class="card variant-glass w-[17rem] h-[13rem] mx-2">
 								<div class="h-[75%] project-hero bg-cover rounded-lg" style="background-image: url('{project.img}'); background-position: center center;">
@@ -353,7 +362,7 @@
 
 							</div>
 						{/each}
-					</div>
+					</Marqueeck>
 				</div>
 
 			</div>
