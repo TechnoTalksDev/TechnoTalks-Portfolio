@@ -8,10 +8,6 @@
 	import { Marquee } from '@selemondev/svelte-marquee';
 	import '@selemondev/svelte-marquee/dist/style.css';
 	import Experience from '$lib/components/experience.svelte';
-	import IntroCard from '$lib/components/introCard.svelte';
-	import SkillSlider from '$lib/components/skillSlider.svelte';
-	import ProjectCard from '$lib/components/projectCard.svelte';
-	import LatestCommit from '$lib/components/latestCommit.svelte';
 	const toastStore = getToastStore();
 
 	let currentSub = 0;
@@ -50,7 +46,7 @@
 		typeSub();
 	}
 
-	const longWhile = 60000;
+	const longWhile = 30000;
 
 	const comingSoon: ToastSettings = {
 		message:
@@ -133,7 +129,7 @@
 		{
 			name: 'Reko',
 			img: '/reko-banner.png',
-			description: 'Discord bot integration for Minecraft servers. Monitor through panels, charts, and more.',
+			description: 'Discord bot to monitor Minecraft servers',
 			link: '',
 			github: 'https://github.com/TechnoTalksDev/Reko',
 			tags: ['Discord', 'API', 'Minecraft', 'Server']
@@ -141,7 +137,7 @@
 		{
 			name: 'HotDash',
 			img: '/hot-dash.png',
-			description: 'Simple dashboard for host temperatures and load',
+			description: 'Display host temperatures and load',
 			link: '',
 			github: 'https://github.com/TechnoTalksDev/HotDash',
 			tags: ['Server', 'Docker']
@@ -149,7 +145,7 @@
 		{
 			name: '10A VEX',
 			img: '/10A.png',
-			description: 'VEX V5 Robotics programming, implementing various motion algorithms, telemetry systems, localization, and more.',
+			description: 'VEX V5 Robotics programming',
 			link: '',
 			github: 'https://github.com/Exo10A',
 			tags: ['VEX', ['c++']]
@@ -167,7 +163,7 @@
 		{
 			name: 'Simeo',
 			img: '/simeo_full.png',
-			description: 'GPA and Grade caluculation for Synergy students. With seamless integration with Synergy, and highly customizable calculations.',
+			description: 'GPA and Grades for Synergy students',
 			link: 'https://www.simeo.app/',
 			github: 'https://github.com/TechnoTalksDev/Simeo',
 			tags: ['FBLA', 'full-stack']
@@ -175,7 +171,7 @@
 		{
 			name: 'Reko Link',
 			img: '/reko-banner.png',
-			description: 'Integration server-side for Reko with WebSockets, API, and more. Allowing access to server console, 2 way chat, active roles, and more.',
+			description: 'Integration server-side for Reko',
 			link: '',
 			github: 'https://github.com/TechnoTalksDev/Reko-Link',
 			tags: ['WebSockets', 'API', 'Minecraft', 'Server']
@@ -183,7 +179,7 @@
 		{
 			name: 'Rider-MC',
 			img: '/rider-banner.png',
-			description: 'Ride any Minecraft mob! With a variety of permissions, and customization.',
+			description: 'Ride any Minecraft mob!',
 			link: 'https://www.spigotmc.org/resources/rider-simple-easy-ride-anything-1-8x-1-17x.93807/',
 			github: 'https://github.com/TechnoTalksDev/Rider-MC',
 			tags: ['Minecraft', 'Plugin', 'Java']
@@ -191,7 +187,7 @@
 		{
 			name: 'CraftableSaddlesMC',
 			img: '/saddle-banner.png',
-			description: 'Craft saddles for any mob! With a variety of permissions, and customization.',
+			description: 'With a variety of permissions!',
 			link: 'https://www.spigotmc.org/resources/craftablesaddles-simple-easy-1-8x-1-17x.93871/',
 			github: 'https://github.com/TechnoTalksDev/CraftableSaddlesMC',
 			tags: ['Minecraft', 'Plugin', 'Java']
@@ -199,7 +195,7 @@
 		{
 			name: 'Spaceboi',
 			img: '/spaceboi.png',
-			description: 'Pilot and fight in 2D! Built with pygame, and python.',
+			description: 'Pilot and fight in 2D!',
 			link: '',
 			github: 'https://github.com/TechnoTalksDev/Spaceboi',
 			tags: ['PyGame', 'Python', 'GameDev']
@@ -207,7 +203,7 @@
 		{
 			name: 'SAHF',
 			img: '/SAHF-banner.png',
-			description: 'South Asian Heart Foundation website, featuring a variety of services, along with a blog.',
+			description: 'South Asian Heart Foundation website',
 			link: 'https://www.sahf.life/',
 			github: 'https://github.com/South-Asian-Heart-Foundation/SAHF-site',
 			tags: ['SvelteKit', 'full-stack', 'Non-profit']
@@ -278,107 +274,41 @@
 -->
 
 <div class="h-[100vh] w-[100vw] backdrop-blur-3xl overflow-x-hidden scroll-smooth">
-	<!--
-	<div id="hero" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
-		
-		<div class="space-y-10 h-full text-center flex flex-col items-center justify-center">
-			
-			<div>
-
-				<h2 class="h1 text-7xl glow">Chandan C.</h2>
-				<div class="flex flex-row justify-center items-center mt-3">
-					<h2 class="text-2xl gradient-heading">{sub}</h2>
-					<div class="cursor my-1"></div>
-				</div>
-
-				<hr class="mt-6 !border-t-4 rounded-xl"/>
-				<div class="mt-6 h-[4px] bg-white rounded-3xl gradient-bar animate-gradient"></div>
-			
-			</div>
-
-
-
-
-		</div>
-
-		<div class="flex-end">
-			<div class="flex justify-center items-center w-[50px] h-[50px] rounded-full variant-soft-primary animate-bounce">
-				<a href="#about"><ArrowDown size="30" strokeWidth=2.5/></a>
-			</div>
-			<div id="b-blob" class="absolute bottom-[0rem] left-0 right-0 ml-auto mr-auto w-[5rem] h-[5rem] rounded-[50%] bg-gradient-to-br from-surface-500 via-primary-500 to-white opacity-40 overflow-x-hidden -z-10 blur-3xl">
-			</div>
-		</div>
-
-	</div>
-	-->
 
 	<div
 		id="home"
 		class="container h-[100vh] mx-auto flex flex-row flex-wrap lg:flex-col justify-center items-center z-[1] overflow-x-hidden space"
 	>
 
-		<div class="h-full flex flex-col justify-center items-center">
 
-			<div class="text-center flex flex-row items-center justify-center">
-				<!--intro card-->
+      <div class="grid gap-4 lg:grid-cols-2 lg:grid-rows-2">
 
-						<IntroCard />
-						<!--skills-->
-						<SkillSlider skills={skills} />
+        <div class="relative max-lg:row-start-1">
+          <div class="relative flex h-full flex-col overflow-hidden card variant-glass">
+            1
+          </div>
+        </div>
 
-				<!--
-					<div class="card variant-glass-surface py-2 w-[25rem] max-w-[98vw] mt-2">
-						<div class="scroll-container">
-							<div class="scroll-content">
-								{#each skills.concat(skills) as skill, index}
-									<div class="flex-none w-[35px] mx-10">
-										<a href="/" class="flex flex-row items-center">
-											<img src="{skill.img}" alt="{skill.name + " logo"}" class="opacity-[65%]"/>
-											<p class="ml-1 h5">{skill.name}</p>
-										</a>
-									</div>
-								{/each}
-							</div>
-						</div>
-
-					</div>
-				-->
+        <div class="relative max-lg:row-start-2 lg:col-start-1 lg:row-start-2">
+          <div class="relative flex h-full flex-col overflow-hidden card variant-glass">
+            2
+          </div>
+        </div>
 
 
+        <div class="relative lg:row-span-2">
+
+          <div class="relative flex h-full flex-col overflow-hidden card variant-glass ">
+            3
+          </div>
+
+        </div>
+      </div>
 
 
-
-			</div>
-
-			<LatestCommit />
-			<!--experience-->
-			<Experience experiences={experiences} />
-		
-		</div>
-
-		<ProjectCard projects={projects} />
-
-	</div>
-
-
-
-	<!--
-	<div id="contact" class="container h-[100vh] mx-auto flex justify-center items-center z-[1] overflow-x-hidden">
-		<div class="space-y-10 text-center flex flex-col items-center">
-			
-			<div>
-				<h3 class="h3 text-7xl glow">Stay in touch</h3>
-				<h3 class="h3 opacity-[65%] mb-2">Let me know when cool projects go live</h3>
-				<form class="flex flex-row" on:submit={handleMailList}>
-					<input class="input variant-glass mr-1" placeholder="Enter your email"/>
-					<button type="submit" class="btn variant-glass-primary ml-1" data-umami-event="mail-signup">Join</button>
-				</form>
-				
-			</div>
-		
-		</div>
-	</div>
-	-->
+  
+  
+  </div>
 </div>
 
 <style lang="postcss">

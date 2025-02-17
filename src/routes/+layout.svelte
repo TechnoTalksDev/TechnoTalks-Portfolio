@@ -31,6 +31,8 @@
 <Toast position="br" padding="p-3"/>
 <!-- App Shell -->
 <AppShell>
+
+	<!--
 	<div class = "absolute left-0 right-0 mt-6 ml-auto mr-auto flex flex-col items-center z-[2] w-min">
 		<div class="flex flex-row">
 			<a
@@ -56,6 +58,7 @@
 			</a>
 		</div>
 	</div>
+	-->
 	<!-- Page Route Content -->
 	<slot />
 </AppShell>
