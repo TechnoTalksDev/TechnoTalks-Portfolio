@@ -9,19 +9,17 @@
 
 	let navs = {
 		navbar: [
-      { label: 'Discord', icon: DiscordSvg, href: '#' },
-			{ label: 'Github', icon: GithubSvg, href: '#' },
+      { label: 'Discord', icon: DiscordSvg, href: 'https://discord.gg/8vNHAA36fR' },
+			{ label: 'Github', icon: GithubSvg, href: 'https://github.com/TechnoTalksDev' },
 			
-			{ label: 'LinkedInSvg', icon: LinkedInSvg, href: '#' },
-      { label: 'Mail', icon: GmailSvg, href: '#' },
+			{ label: 'LinkedInSvg', icon: LinkedInSvg, href: 'https://www.linkedin.com/in/murali-sri-chandan-chengalvala-a31501288/' },
+      { label: 'Mail', icon: GmailSvg, href: 'mailto:technotalksyt101@gmail.com' },
 		]
 	};
 </script>
 
-
-
 <span
-	class="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-6xl md:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10 animate-pulse"
+	class="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-6xl md:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10"
 >
 	Get in touch
 </span>
@@ -36,9 +34,11 @@
 	>
 		{#each navs.navbar as item}
 			<DockIcon {mouseX} {magnification} {distance}>
-				<div class="hover:bg-zinc-200/20 transition-all duration-200 rounded-full p-2">
+				<a href={item.href} target="_blank">
+        <div class="hover:bg-zinc-200/20 transition-all duration-200 rounded-full p-2">
 					<img src={item.icon} alt={item.label} class="h-7 w-7" />
 				</div>
+        </a>
 			</DockIcon>
 		{/each}
 	</Dock>

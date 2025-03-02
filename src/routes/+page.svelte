@@ -53,11 +53,11 @@
 		typeSub();
 	}
 
-	const longWhile = 60000;
+	const longWhile = 30000;
 
 	const comingSoon: ToastSettings = {
 		message:
-			"<strong>Hey! <span class='wave text-2xl'>👋</span></strong> <br/>Look's like you ❤️ my work! <br/> This site's still under construction... 🚧 <br/> <strong>Check back later</strong> for more cool stuff!",
+			"<strong>Hey! <span class='wave text-2xl'>👋</span></strong> <br/>Look's like you ❤️ my work! <br/> Want experiences like this for yourself? 🚧 <br/> <a href='#contact' class='btn btn-md btn-hover variant-glass-success mt-1 font-semibold'>Get in touch!</a>",
 		background: 'variant-glass-primary',
 		timeout: 60000
 	};
@@ -319,11 +319,14 @@
 
 
 	<div id="projects" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
+		<div class="h-full flex flex-col items-center justify-center">	
 		<ProjectCard projects={projects} />
+		</div>
 	</div>
 
 
 	<div id="contact" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
+		
 		<ContactCall />
 	</div>
 

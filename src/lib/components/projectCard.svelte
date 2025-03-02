@@ -4,10 +4,10 @@
   export let projects;
 </script>
 
-<div class="card variant-glass-surface flex flex-col col-start-2 h-full w-[25rem] max-w-[98vw] overflow-x-hidden overflow-y-visible custom-scrollbar">
+<div class="card variant-glass-surface flex flex-col h-[98vh] w-[25rem] max-w-[98vw] overflow-x-hidden overflow-y-visible custom-scrollbar">
 
   {#each projects as project, index}
-    <div class="card-hover w-full h-full my-1 mx-2 py-2 relative">
+    <div class="card-hover w-[25rem] h-fit my-1 mx-1 py-2 relative ">
       <div id="bgimg" class="w-full absolute inset-0 z-[-1] h-full project-hero bg-cover rounded-2xl" style="background-image: url('{project.img}'); background-position: center center;"></div>
 
       <div id="content"class="text-left ml-2 relative">
@@ -39,7 +39,7 @@
     </div>
   {/each}			
 
-  </div>
+</div>
 
 
 
