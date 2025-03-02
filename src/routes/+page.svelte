@@ -12,6 +12,9 @@
 	import SkillSlider from '$lib/components/skillSlider.svelte';
 	import ProjectCard from '$lib/components/projectCard.svelte';
 	import LatestCommit from '$lib/components/latestCommit.svelte';
+	import SkillsSliderHorizontal from '$lib/components/skillsSliderHorizontal.svelte';
+	import NewExperience from '$lib/components/newExperience.svelte';
+	import ContactCall from '$lib/components/contactCall.svelte';
 	const toastStore = getToastStore();
 
 	let currentSub = 0;
@@ -278,6 +281,52 @@
 -->
 
 <div class="h-[100vh] w-[100vw] backdrop-blur-3xl overflow-x-hidden scroll-smooth">
+	<div id="hero" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
+		
+		
+		
+		<div class="h-full text-center flex flex-col items-center justify-center">
+
+			<IntroCard />
+			<span class="my-1.5"></span>
+			<SkillsSliderHorizontal skills={skills} />
+		</div>
+		
+		<!--arrow-->
+		<div class="flex-end">
+			<div class="flex justify-center items-center w-[50px] h-[50px] rounded-full variant-soft-primary animate-bounce">
+				<a href="#experience"><ArrowDown size="30" strokeWidth=2.5/></a>
+			</div>
+			<div id="b-blob" class="absolute bottom-[0rem] left-0 right-0 ml-auto mr-auto w-[5rem] h-[5rem] rounded-[50%] bg-gradient-to-br from-surface-500 via-primary-500 to-white opacity-40 overflow-x-hidden -z-10 blur-3xl">
+			</div>
+		</div>
+
+	</div>
+
+	<div id="experience" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
+		<div class="h-full flex flex-col items-center justify-center">	
+		<NewExperience	experiences={experiences} />
+		</div>
+		<!--arrow-->
+		<div class="flex-end">
+			<div class="flex justify-center items-center w-[50px] h-[50px] rounded-full variant-soft-primary animate-bounce">
+				<a href="#projects"><ArrowDown size="30" strokeWidth=2.5/></a>
+			</div>
+			<div id="b-blob" class="absolute bottom-[0rem] left-0 right-0 ml-auto mr-auto w-[5rem] h-[5rem] rounded-[50%] bg-gradient-to-br from-surface-500 via-primary-500 to-white opacity-40 overflow-x-hidden -z-10 blur-3xl">
+			</div>
+		</div>
+	</div>
+
+
+	<div id="projects" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
+		<ProjectCard projects={projects} />
+	</div>
+
+
+	<div id="contact" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
+		<ContactCall />
+	</div>
+
 	<!--
 	<div id="hero" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
 		
@@ -312,6 +361,7 @@
 	</div>
 	-->
 
+	<!--
 	<div
 		id="home"
 		class="container h-[100vh] mx-auto flex flex-row flex-wrap lg:flex-col justify-center items-center z-[1] overflow-x-hidden space"
@@ -320,13 +370,12 @@
 		<div class="h-full flex flex-col justify-center items-center">
 
 			<div class="text-center flex flex-row items-center justify-center">
-				<!--intro card-->
+
 
 						<IntroCard />
-						<!--skills-->
+
 						<SkillSlider skills={skills} />
 
-				<!--
 					<div class="card variant-glass-surface py-2 w-[25rem] max-w-[98vw] mt-2">
 						<div class="scroll-container">
 							<div class="scroll-content">
@@ -342,7 +391,7 @@
 						</div>
 
 					</div>
-				-->
+
 
 
 
@@ -351,7 +400,7 @@
 			</div>
 
 			<LatestCommit />
-			<!--experience-->
+
 			<Experience experiences={experiences} />
 		
 		</div>
@@ -359,7 +408,7 @@
 		<ProjectCard projects={projects} />
 
 	</div>
-
+	-->
 
 
 	<!--
@@ -405,24 +454,9 @@
 		}
 	}
 
-	.animate-gradient {
-		background-size: 300%;
-		-webkit-animation: animatedgradient 6s ease infinite alternate;
-		-moz-animation: animatedgradient 6s ease infinite alternate;
-		animation: animatedgradient 6s ease infinite alternate;
-	}
 
-	@keyframes animatedgradient {
-		0% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-		100% {
-			background-position: 0% 50%;
-		}
-	}
+
+
 
 	@keyframes scroll {
 		0% {
