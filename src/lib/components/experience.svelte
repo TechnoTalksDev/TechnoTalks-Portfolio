@@ -3,7 +3,7 @@
 </script>
 
 
-<div class="card variant-glass-surface flex flex-col p-8 w-fit max-w-[98vw]overflow-x-auto overflow-y-hidden h-fit row-start-2" style="grid-column: 1 / 2;">
+<div class="card variant-glass-surface flex flex-col p-8 w-fit max-w-[98vw] overflow-x-auto overflow-y-hidden h-fit row-start-2" style="grid-column: 1 / 2;">
 				
   <div class="grid grid-flow-col gap-20 justify-items-center w-fit">
     {#each experiences as experience, index}

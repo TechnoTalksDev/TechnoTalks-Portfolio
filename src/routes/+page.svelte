@@ -129,7 +129,17 @@
 			name: 'VEX',
 			img: '/vex.png',
 			skill: 4.2
-		}
+		},
+		{
+			name: "PocketBase",
+			img: "/pb.svg",
+			skill: 4.2
+		},
+		{name: "Flutter",
+			img: "/flutter.svg",
+			skill: 3.2
+		},
+		
 	];
 
 	const projects = [
@@ -216,34 +226,68 @@
 			tags: ['SvelteKit', 'full-stack', 'Non-profit']
 		}
 	];
-
+	
+	/*
 	const experiences = [
 		{
 			date: 'August 2023 - Present',
 			company: 'Exothermic Alpha',
 			position: 'Lead Developer',
-			blurb: 'Working on large-scale applications using modern web technologies.'
+			blurb: 'Lead Software Developer for Exothermic Alpha 10A. Developing motion algorithms, autonomous routines, localization, and more for VEX Robotics'
 		},
 		{
 			date: 'July - August 2024',
 			company: 'Quadrant',
 			position: 'Intern',
-			blurb: 'Working on large-scale applications using modern web technologies.'
+			blurb: 'Lead a team of Interns as a SCRUM master to develop an data driven application for a company project pitch. Learned various technologies like: Azure DevOps, Data Engineering, Data Warehousing, SQL Server, Deep Learning, Artificial Intelligence, Generative AI'
 		},
 		{
 			date: 'August 2024 - Present',
 			company: 'SAHF',
 			position: 'CTO',
-			blurb: 'Working on large-scale applications using modern web technologies.'
+			blurb: 'Manage all technology affairs of SAHF. Designed a full stack website to drive conversions. Along with designing a blog system with SEO performance, interactive quizzes to promote engagement in events and more.'
 		},
 
 		{
 			date: 'Oct. 2024 - Present',
 			company: 'NC FBLA',
 			position: 'Tech Commitee',
-			blurb: 'Working on large-scale applications using modern web technologies.'
+			blurb: 'Maintain technology initiatives of North Creek FBLA Work on the NC FBLA mobile app Build technology solutions for local business partners'
 		}
 	];
+	*/
+
+	const experiences = [
+    {
+        date: 'August 2023 - Present',
+        company: 'Exothermic Alpha',
+        position: 'Lead Developer',
+        blurb: 'Developing motion algorithms and autonomous routines for VEX Robotics, optimizing localization and system performance.',
+				skills: [4, 7, 8]
+    },
+    {
+        date: 'July - August 2024',
+        company: 'Quadrant',
+        position: 'Intern',
+        blurb: 'Led interns as SCRUM master to build a data-driven application for a company pitch, leveraging modern cloud and AI technologies.',
+				skills: [0, 6, 7, 9]
+    },
+    {
+        date: 'August 2024 - Present',
+        company: 'SAHF',
+        position: 'CTO',
+        blurb: 'Oversee technology strategy, develop conversion-driven web solutions, and implement SEO-focused blogs and interactive tools.',
+				skills: [0, 6, 9]
+    },
+    {
+        date: 'Oct. 2024 - Present',
+        company: 'NC FBLA',
+        position: 'Tech Committee',
+        blurb: 'Maintain NC FBLA’s tech initiatives, develop mobile solutions, and build digital tools for local business partners.',
+				skills: [10]
+    }
+];
+
 
 	const featuredProject = {
 		name: 'Simeo',
@@ -305,7 +349,7 @@
 
 	<div id="experience" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
 		<div class="h-full flex flex-col items-center justify-center">	
-		<NewExperience	experiences={experiences} />
+		<NewExperience	experiences={experiences} skills={skills}/>
 		</div>
 		<!--arrow-->
 		<div class="flex-end">
