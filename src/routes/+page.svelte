@@ -144,28 +144,13 @@
 
 	const projects = [
 		{
-			name: 'Reko',
-			img: '/reko-banner.png',
-			description: 'Discord bot integration for Minecraft servers. Monitor through panels, charts, and more.',
-			link: '',
-			github: 'https://github.com/TechnoTalksDev/Reko',
-			tags: ['Discord', 'API', 'Minecraft', 'Server']
-		},
-		{
-			name: 'HotDash',
-			img: '/hot-dash.png',
-			description: 'Simple dashboard for host temperatures and load',
-			link: '',
-			github: 'https://github.com/TechnoTalksDev/HotDash',
-			tags: ['Server', 'Docker']
-		},
-		{
 			name: '10A VEX',
 			img: '/10A.png',
-			description: 'VEX V5 Robotics programming, implementing various motion algorithms, telemetry systems, localization, and more.',
-			link: '',
+			description: '<strong>Innovate Award @ State</strong><br/>VEX V5 Robotics programming, implementing various motion algorithms, telemetry systems, localization, and more.',
+			link: 'https://www.instagram.com/exothermicalpha/',
 			github: 'https://github.com/Exo10A',
-			tags: ['VEX', ['c++']]
+			tags: ['VEX', 'c++'],
+			skills: [8, 4, 3, 7]
 		},
 		/*
 		{
@@ -180,42 +165,11 @@
 		{
 			name: 'Simeo',
 			img: '/simeo_full.png',
-			description: 'GPA and Grade caluculation for Synergy students. With seamless integration with Synergy, and highly customizable calculations.',
+			description: '<strong>1.3k+ views per month</strong><br/>GPA and Grade caluculation for Synergy students. With seamless integration with Synergy, and highly customizable calculations.',
 			link: 'https://www.simeo.app/',
 			github: 'https://github.com/TechnoTalksDev/Simeo',
-			tags: ['FBLA', 'full-stack']
-		},
-		{
-			name: 'Reko Link',
-			img: '/reko-banner.png',
-			description: 'Integration server-side for Reko with WebSockets, API, and more. Allowing access to server console, 2 way chat, active roles, and more.',
-			link: '',
-			github: 'https://github.com/TechnoTalksDev/Reko-Link',
-			tags: ['WebSockets', 'API', 'Minecraft', 'Server']
-		},
-		{
-			name: 'Rider-MC',
-			img: '/rider-banner.png',
-			description: 'Ride any Minecraft mob! With a variety of permissions, and customization.',
-			link: 'https://www.spigotmc.org/resources/rider-simple-easy-ride-anything-1-8x-1-17x.93807/',
-			github: 'https://github.com/TechnoTalksDev/Rider-MC',
-			tags: ['Minecraft', 'Plugin', 'Java']
-		},
-		{
-			name: 'CraftableSaddlesMC',
-			img: '/saddle-banner.png',
-			description: 'Craft saddles for any mob! With a variety of permissions, and customization.',
-			link: 'https://www.spigotmc.org/resources/craftablesaddles-simple-easy-1-8x-1-17x.93871/',
-			github: 'https://github.com/TechnoTalksDev/CraftableSaddlesMC',
-			tags: ['Minecraft', 'Plugin', 'Java']
-		},
-		{
-			name: 'Spaceboi',
-			img: '/spaceboi.png',
-			description: 'Pilot and fight in 2D! Built with pygame, and python.',
-			link: '',
-			github: 'https://github.com/TechnoTalksDev/Spaceboi',
-			tags: ['PyGame', 'Python', 'GameDev']
+			tags: ['FBLA', 'full-stack'],
+			skills: [0, 1, 2, 6]
 		},
 		{
 			name: 'SAHF',
@@ -223,8 +177,73 @@
 			description: 'South Asian Heart Foundation website, featuring a variety of services, along with a blog.',
 			link: 'https://www.sahf.life/',
 			github: 'https://github.com/South-Asian-Heart-Foundation/SAHF-site',
-			tags: ['SvelteKit', 'full-stack', 'Non-profit']
-		}
+			tags: ['SvelteKit', 'full-stack', 'Non-profit'],
+			skills: [0, 1, 9, 6]
+		},
+		{
+			name: 'ThePiSchool',
+			img: '/thepischool.png',
+			description: 'Freelance web development client, featuring a tutoring service paired with tastefull design.',
+			link: 'https://thepischools.com/',
+			github: '',
+			tags: ['SvelteKit', 'full-stack', 'Business'],
+			skills: [0, 1, 6]
+		},
+		{
+			name: 'Reko',
+			img: '/reko-banner.png',
+			description: '<strong>150+ commits </strong><br/>Discord bot integration for Minecraft servers. Monitor through panels, charts, and more.',
+			link: '',
+			github: 'https://github.com/TechnoTalksDev/Reko',
+			tags: ['Discord', 'API', 'Minecraft', 'Server'],
+			skills: [3, 2, 7]
+		},
+		{
+			name: 'Rider-MC',
+			img: '/rider-banner.png',
+			description: '<strong>1000+ downloads</strong><br/>Ride any Minecraft mob! With a variety of permissions, and customization.',
+			link: 'https://www.spigotmc.org/resources/rider-simple-easy-ride-anything-1-8x-1-17x.93807/',
+			github: 'https://github.com/TechnoTalksDev/Rider-MC',
+			tags: ['Minecraft', 'Plugin', 'Java'],
+			skills: [5]
+		},
+		{
+			name: 'CraftableSaddlesMC',
+			img: '/saddle-banner.png',
+			description: '<strong>500+ downloads</strong><br/>Craft saddles for any mob! With a variety of permissions, and customization.',
+			link: 'https://www.spigotmc.org/resources/craftablesaddles-simple-easy-1-8x-1-17x.93871/',
+			github: 'https://github.com/TechnoTalksDev/CraftableSaddlesMC',
+			tags: ['Minecraft', 'Plugin', 'Java'],
+			skills: [5]
+		},
+		{
+			name: 'Reko Link',
+			img: '/reko-banner.png',
+			description: 'Integration server-side for Reko with WebSockets, API, and more. Allowing access to server console, 2 way chat, active roles, and more.',
+			link: '',
+			github: 'https://github.com/TechnoTalksDev/Reko-Link',
+			tags: ['WebSockets', 'API', 'Minecraft', 'Server'],
+			skills: [5, 3]
+		},
+		{
+			name: 'HotDash',
+			img: '/hot-dash.png',
+			description: 'Simple dashboard for host temperatures and load',
+			link: '',
+			github: 'https://github.com/TechnoTalksDev/HotDash',
+			tags: ['Server', 'Docker'],
+			skills: [0, 1]
+		},
+		{
+			name: 'Spaceboi',
+			img: '/spaceboi.png',
+			description: 'Pilot and fight in 2D! Built with pygame, and python.',
+			link: '',
+			github: 'https://github.com/TechnoTalksDev/Spaceboi',
+			tags: ['PyGame', 'Python', 'GameDev'],
+			skills: [3]
+		},
+
 	];
 	
 	/*
@@ -364,7 +383,8 @@
 
 	<div id="projects" class="container h-[100vh] mx-auto flex flex-col justify-center items-center z-[1] overflow-x-hidden">
 		<div class="h-full flex flex-col items-center justify-center">	
-		<ProjectCard projects={projects} />
+
+			<ProjectCard projects={projects} skills={skills} />
 		</div>
 	</div>
 

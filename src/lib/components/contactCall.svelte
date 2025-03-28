@@ -13,7 +13,7 @@
 			{ label: 'Github', icon: GithubSvg, href: 'https://github.com/TechnoTalksDev' },
 			
 			{ label: 'LinkedInSvg', icon: LinkedInSvg, href: 'https://www.linkedin.com/in/murali-sri-chandan-chengalvala-a31501288/' },
-      { label: 'Mail', icon: GmailSvg, href: 'mailto:technotalksyt101@gmail.com' },
+      { label: 'Mail', icon: GmailSvg, href: 'mailto:chandan.chengalvala@gmail.com' },
 		]
 	};
 </script>

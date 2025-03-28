@@ -2,6 +2,7 @@
 	import { Link } from "lucide-svelte";
 
   export let projects;
+  export let skills;
 </script>
 
 <div class="card variant-glass-surface flex flex-col h-[98vh] w-[25rem] max-w-[98vw] overflow-x-hidden overflow-y-visible custom-scrollbar">
@@ -29,12 +30,23 @@
           >
           {/if}
         </div>
-
-        {#each project.tags as tag}
+        <div class = "flex flex-row items-center opacity-70">
+          {#each project.skills as index}
+            
+              <div class="flex-none w-[15px] mr-2">
+                <a href="/" class="">
+                  <img src={skills[index].img} alt={skills[index].name + ' logo'} class=""/>
+                </a>
+              </div>
+            
+          {/each}
+          {#each project.tags as tag}
           <span class="text-sm mr-1 text-primary-400">#{tag}</span>
-        {/each}
+          {/each}
+        </div>
 
-        <p class="opacity-[85%]">{project.description}</p>
+
+        <p class="opacity-[85%]">{@html project.description}</p>
       </div>
     </div>
   {/each}			
